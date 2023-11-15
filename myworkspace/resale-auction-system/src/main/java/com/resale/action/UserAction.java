@@ -11,7 +11,7 @@ import com.resale.app.bean.UserBean;
 import com.resale.app.bean.UserBeanI;
 import com.resale.app.model.entity.User;
 
-@WebServlet("/user")
+@WebServlet("/useraction")
 public class UserAction extends BaseAction {
     UserBeanI userBean = new UserBean();
 

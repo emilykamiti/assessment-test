@@ -37,7 +37,6 @@ public class Login extends HttpServlet {
         System.out.println("This is the time the database was created: " + database.getDatabaseCreateAt());
 
         for (User user : database.getUsers()) {
-            System.out.println("HERE 1");
             if (username.equals(user.getUsername()) && password.equals(user.getPassword())) {
                 HttpSession httpSession = req.getSession(true);
 
@@ -49,7 +48,6 @@ public class Login extends HttpServlet {
   return;
             }
         }
-System.out.println("HERE 3");
         PrintWriter print = resp.getWriter();
         print.write("<html><body>Invalid login details <a href=\".\"> Login again </a></body></html>");
 

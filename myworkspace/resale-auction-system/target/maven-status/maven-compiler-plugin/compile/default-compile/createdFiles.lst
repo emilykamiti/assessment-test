@@ -8,6 +8,7 @@ com/resale/action/BaseAction.class
 com/resale/action/ItemAction.class
 com/resale/action/LogOutAction.class
 com/resale/app/view/html/MenuLink.class
+com/resale/action/ShowBid.class
 com/resale/app/bean/ItemBean.class
 com/resale/app/model/entity/Item.class
 com/resale/app/view/navigationbar/BottomNavigationBar.class
