@@ -6,8 +6,8 @@ import com.resale.app.model.entity.User;
 import com.resale.database.Database;
 
 public class UserBean implements UserBeanI, Serializable {
-    
-Database database = Database.getDbInstance();
+
+    Database database = Database.getDbInstance();
 
     @Override
     public boolean register(User user) {
@@ -26,4 +26,3 @@ Database database = Database.getDbInstance();
         return true;
     }
 }
-

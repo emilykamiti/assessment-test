@@ -1,4 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.resale.app.model.entity.Item" %>
+
+<%
+    String confirmationMessage = (String) request.getAttribute("confirmationMessage");
+    // Other JSP code
+%>
+
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -33,7 +42,6 @@
 
         form {
             background-color: #f8f9fa;
-            /* Light gray background color */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -54,8 +62,7 @@
         }
 
         button {
-            background-color: #1E90FF;
-            /* Blue color for the button */
+            background-color: #1E90FF; /* Blue color for the button */
             color: white;
             width: 100%;
             padding: 12px 20px;
@@ -66,11 +73,9 @@
         }
 
         button:hover {
-            background-color: #0066CC;
-            /* Darker blue on hover */
+            background-color: #0066CC; /* Darker blue on hover */
         }
 
-        /* Styles for the confirmation message container */
         .confirmation-message-container {
             background-color: #4c82af;
             color: #ffffff;
@@ -100,17 +105,18 @@
             <label for="bid_amount">Amount to bid:</label>
             <input type="number" id="bid_amount" name="bid_amount" required><br>
 
-            <input type="hidden" name="product" value="123"> <!-- Replace with your logic to get the product value -->
+            <!-- Manually input the item name -->
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" name="itemName" required><br>
 
-            <input type="hidden" name="price" value="50.0"> <!-- Replace with your logic to get the price value -->
+            <input type="hidden" name="product" value="123">
+
+            <input type="hidden" name="price" value="50.0">
 
             <button type="submit" name="bid">Make a bid</button>
         </form>
 
-        <% 
-            String confirmationMessage = (String) request.getAttribute("confirmationMessage"); 
-            if (confirmationMessage != null && !confirmationMessage.isEmpty()) { 
-        %>
+        <% if (confirmationMessage != null && !confirmationMessage.isEmpty()) { %>
         <div class="confirmation-message-container">
             <div class="confirmation-message">
                 <%= confirmationMessage %>

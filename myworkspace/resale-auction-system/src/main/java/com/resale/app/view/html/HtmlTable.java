@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.lang.reflect.Field;
 import java.util.List;
 
-public class HtmlTableComponent implements Serializable {
+public class HtmlTable implements Serializable {
 
     public static String table(List<? extends Object> models) {
         if (models == null || models.isEmpty())
@@ -37,10 +37,10 @@ public class HtmlTableComponent implements Serializable {
                 try {
                     field.setAccessible(true);
                     if (field.getName().equalsIgnoreCase("imageURL")) {
-                        // If the field is imageURL, assume it's an image and use an <img> tag
-                        trBuilder.append("<td class='item-image'><img src='").append(field.get(model)).append("' alt='Item Image'></td>");
+                        trBuilder.append("<td class='item-image'><img src='").append(field.get(model))
+                                .append("' alt='Item Image'></td>");
                     } else {
-                        // For other fields, simply display the field value
+
                         trBuilder.append("<td>").append(field.get(model)).append("</td>");
                     }
                 } catch (IllegalAccessException e) {
@@ -48,7 +48,6 @@ public class HtmlTableComponent implements Serializable {
                 }
             }
 
-            // Include the Bid link for each row
             trBuilder.append("<td><a href='./bidaction'>Bid</a></td>");
 
             trBuilder.append("</tr>");

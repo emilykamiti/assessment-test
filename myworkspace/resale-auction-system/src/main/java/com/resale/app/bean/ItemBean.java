@@ -1,14 +1,14 @@
 package com.resale.app.bean;
 
 import com.resale.app.model.entity.Item;
-import com.resale.app.view.html.HtmlTableComponent;
+import com.resale.app.view.html.HtmlTable;
 import com.resale.database.Database;
 
 public class ItemBean implements ItemBeanI {
 
     public String showItems() {
 
-        return HtmlTableComponent.table(Database.getDbInstance().getItems());
+    return HtmlTable.table(Database.getDbInstance().getItems());
     }
 
     public Item addOrUpdateItem(Item item) {

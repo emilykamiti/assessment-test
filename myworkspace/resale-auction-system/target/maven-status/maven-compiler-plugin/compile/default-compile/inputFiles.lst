@@ -1,7 +1,6 @@
 /home/emily/myworkspace/resale-auction-system/src/main/java/com/resale/app/view/html/ResaleHtmlFormField.java
 /home/emily/myworkspace/resale-auction-system/src/main/java/com/filter/AuthFilter.java
 /home/emily/myworkspace/resale-auction-system/src/main/java/com/resale/app/view/html/MenuLink.java
-/home/emily/myworkspace/resale-auction-system/src/main/java/com/resale/app/view/html/HtmlTableComponent.java
 /home/emily/myworkspace/resale-auction-system/src/main/java/com/resale/app/bean/UserBeanI.java
 /home/emily/myworkspace/resale-auction-system/src/main/java/com/resale/action/ItemAction.java
 /home/emily/myworkspace/resale-auction-system/src/main/java/com/resale/auth/LogOut.java
@@ -36,5 +35,5 @@
 /home/emily/myworkspace/resale-auction-system/src/main/java/com/resale/app/view/navigationbar/TopNavigationBar.java
 /home/emily/myworkspace/resale-auction-system/src/main/java/com/resale/action/BaseAction.java
 /home/emily/myworkspace/resale-auction-system/src/main/java/com/resale/action/BidAction.java
+/home/emily/myworkspace/resale-auction-system/src/main/java/com/resale/app/view/html/HtmlTable.java
 /home/emily/myworkspace/resale-auction-system/src/main/java/com/resale/app/bean/AuthBeanI.java
-/home/emily/myworkspace/resale-auction-system/src/main/java/com/resale/app/model/entity/ItemCategory.java

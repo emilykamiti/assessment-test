@@ -26,20 +26,17 @@ public class BidAction extends HttpServlet {
         String userName = request.getParameter("name");
         String phone = request.getParameter("phone");
         String bidAmountParam = request.getParameter("bid_amount");
+        String itemName = request.getParameter("itemName");
 
         if (bidAmountParam != null && !bidAmountParam.isEmpty()) {
             try {
                 double bidAmount = Double.parseDouble(bidAmountParam);
 
-                Bid bid = new Bid(userName, phone, bidAmount);
-                bid.setUserName(userName);
-                bid.setPhone(phone);
-                bid.setBidAmount(bidAmount);
+                Bid bid = new Bid(0, itemName, userName, phone, bidAmount);
 
                 boolean isBidSubmitted = bidBean.submitBid(bid);
 
                 if (isBidSubmitted) {
-                    // Set bidBean in the session
                     HttpSession session = request.getSession();
                     session.setAttribute("bidBean", bidBean);
 

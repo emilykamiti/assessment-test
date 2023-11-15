@@ -1,15 +1,21 @@
 package com.resale.app.model.entity;
 
 import java.io.Serializable;
+import com.resale.app.view.html.ResaleHtmlForm;
+import com.resale.app.view.html.ResaleHtmlFormField;
 
+@ResaleHtmlForm(label = "User", url = "./user")
 public class User implements Serializable {
 
     private Long id;
 
+    @ResaleHtmlFormField(label = "user-username")
     private String username;
 
+    @ResaleHtmlFormField(label = "password")
     private String password;
 
+    @ResaleHtmlFormField(label = "confirm-password")
     private String confirmPassword;
 
     public User(){}

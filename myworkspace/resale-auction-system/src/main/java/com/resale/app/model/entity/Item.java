@@ -1,7 +1,6 @@
 package com.resale.app.model.entity;
 
 import java.io.Serializable;
-import java.util.List;
 import com.resale.app.view.html.ResaleHtmlForm;
 import com.resale.app.view.html.ResaleHtmlFormField;
 import com.resale.app.view.html.ResaleTableColHeader;
@@ -20,7 +19,6 @@ public class Item implements Serializable {
     @ResaleTableColHeader(header = "Price")
     @ResaleHtmlFormField(label = "item-price")
     private double price;
-    
 
     @ResaleTableColHeader(header = "Image")
     @ResaleHtmlFormField(label = "item-image")
@@ -66,24 +64,6 @@ public class Item implements Serializable {
         this.type = type;
         this.price = price;
         this.imageURL = imageURL;
-    }
-
-    // public String tableRow() {
-    // StringBuilder trBuilder = new StringBuilder();
-    // trBuilder.append("<tr>");
-    // trBuilder.append("<td class='item-price'>").append(String.format("%.2f",
-    // getPrice())).append("</td>");
-    // trBuilder.append("<td class='item-image'><img src='").append(getImageURL()).append("' alt='Item Image'></td>");
-    // trBuilder.append("<td class='item-bid'><a href='./bidaction'>Bid</a></td>");
-    // trBuilder.append("</tr>");
-    // return trBuilder.toString();
-    // }
-
-    public void placeBid(Bid newBid) {
-    }
-
-    public List<Bid> getBids() {
-        return null;
     }
 
 }

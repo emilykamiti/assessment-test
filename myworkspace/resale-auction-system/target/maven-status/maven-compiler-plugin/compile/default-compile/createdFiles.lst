@@ -1,11 +1,10 @@
 com/resale/app/bean/BidBean.class
 com/resale/app/view/html/MenuLinkStatus.class
-com/resale/app/view/html/HtmlTableComponent.class
 com/resale/app/bean/ItemBeanI.class
 com/resale/action/PaymentAction.class
-com/resale/app/model/entity/ItemCategory.class
 com/resale/action/BaseAction.class
 com/resale/action/ItemAction.class
+com/resale/app/view/html/HtmlTable.class
 com/resale/action/LogOutAction.class
 com/resale/app/view/html/MenuLink.class
 com/resale/action/ShowBid.class
